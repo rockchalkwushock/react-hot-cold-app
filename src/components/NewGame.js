@@ -11,7 +11,7 @@ class NewGame extends React.Component {
   render() {
     return (
       <div>
-        <button type='button' onClick={this.onClick}>New Game</button>
+        <button type='button' onClick={this.onClick.bind(this)}>New Game</button>
       </div>
     );
   }

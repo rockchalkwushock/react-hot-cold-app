@@ -1,6 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Counter, GuessList, Input, Message, NewGame} from './components/';
+import Counter from './Counter';
+import GuessList from './GuessList';
+import Input from './Input';
+import Message from './Message';
+import NewGame from './NewGame';
 
 /*
   Componenets needed to run game:

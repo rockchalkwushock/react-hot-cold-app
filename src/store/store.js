@@ -4,6 +4,6 @@ import thunk from 'redux-thunk';
 import reducers from '../reducers/reducers';
 
 let middleware = applyMiddleware(thunk);
-let store = createStore(reducers.AppReducer, middleware);
+let store = createStore(reducers, middleware);
 
 export default store;

@@ -6,7 +6,7 @@ import store from '../store/store';
 class Input extends React.Component {
   onClick() {
     let returnNumber = this.props.dispatch(
-      actions.guessNumber(this.userGuess.value, this.props.counter)
+      actions.guessNumber(this.refs.userGuess.value, this.props.counter)
     );
     if (store.getState().correctAnswer === true) {
       store.dispatch(
@@ -20,7 +20,7 @@ class Input extends React.Component {
       <div>
         <form action='#'>
           <input type='text' ref='userGuess' />
-          <button type='button' onClick={this.onClick}>Submit</button>
+          <button type='button' onClick={this.onClick.bind(this)}>Submit</button>
         </form>
       </div>
     );

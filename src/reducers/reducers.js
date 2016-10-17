@@ -10,7 +10,7 @@ let initialState = {
     currentUserScore: 0
 };
 
-const AppReducer = (state, action) => {
+let AppReducer = function (state, action) {
     state = state || initialState;
     switch (action.type) {
         case actions.GUESS_NUMBER:
@@ -19,6 +19,16 @@ const AppReducer = (state, action) => {
             let counter = 0;
             let errorMessage;
             action.number = parseInt(action.number);
+            for (var i = 0; i < state.guesses.length; i++) {
+              if (action.number === state.guesses[i]) {
+                message = 'You already picked that number!';
+              return Object.assign({}, state, {
+                  message
+              });
+            }
+            }
+
+
             if (action.number === state.guessNumber) {
                 correct = true;
                 message = 'You Win! Play Again?';

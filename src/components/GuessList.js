@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 class GuessList extends React.Component {
   render() {
     let guesses = '';
-    let guessLists = this.props.guessLists.map((guessList) => {
-      return <li key={guessList}>{guessList}</li>
+    let guessLists = this.props.guessLists.map((guessList, index) => {
+      return <li key={index}>{guessList}</li>
     });
     return (
       <ul>
