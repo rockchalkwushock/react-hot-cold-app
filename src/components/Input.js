@@ -30,7 +30,8 @@ class Input extends React.Component {
 let mapStateToProps = (state, props) => {
   return {
     counter: state.counter,
-    correctAnswer: state.correctAnswer
+    correctAnswer: state.correctAnswer,
+    fewestGuesses: state.fewestGuesses,
   }
 }
 

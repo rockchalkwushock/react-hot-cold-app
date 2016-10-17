@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Counter, GuessList, Input, Message, NewGame} from './components';
+import {Counter, GuessList, Input, Message, NewGame} from './components/';
 
 /*
   Componenets needed to run game:
@@ -11,7 +11,7 @@ import {Counter, GuessList, Input, Message, NewGame} from './components';
   5. Counter Component
 */
 
-class Game extends React.Component {
+export default class Game extends React.Component {
   render() {
     return (
       <div>

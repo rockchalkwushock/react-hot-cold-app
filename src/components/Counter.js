@@ -12,6 +12,7 @@ class Counter extends React.Component {
     return (
       <div>
         <h3>Number of Guesses: {this.props.counter}</h3>
+        <h3>Fewest Number of Guesses: {this.props.fewestGuesses}</h3>
       </div>
     );
   }
@@ -19,7 +20,8 @@ class Counter extends React.Component {
 
 let mapStateToProps = (state, props) => {
   return {
-    counter: state.counter
+    counter: state.counter,
+    fewestGuesses: state.fewestGuesses
   }
 }
 
